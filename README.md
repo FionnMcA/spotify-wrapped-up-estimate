@@ -73,9 +73,10 @@ Once you have set up the `spotify-wrapped-up-estimate` application and installed
 
 ## Results
 
-| Green | Orange | Red |
-|---------------|----------------|-------------|
-| ![Green Results](/screenshots/green-results.png) | ![Orange Results](/screenshots/orange-results.png) | ![Red Results](/screenshots/red-results.png) |
+| Blue | Green | Orange | Red |
+|------|-------|--------|-----|
+| ![Blue Results](/screenshots/blue-results.png) | ![Green Results](/screenshots/green-results.png) | ![Orange Results](/screenshots/orange-results.png) | ![Red Results](/screenshots/red-results.png) |
+
    
 [Angular]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
