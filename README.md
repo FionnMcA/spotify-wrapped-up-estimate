@@ -2,7 +2,7 @@
 
 ![General Results](/screenshots/results.png)
 
-**spotify-wrapped-up-estimate** is an Angular application designed to give you a sneak peek of what your Spotify Wrapped might look like at the end of 2024. The app retrieves your top tracks and artists using Spotify's Web API, then infers your top genre and estimates your total minutes listened. It presents these insights in a format similar to Spotify's 2023 Wrapped, allowing you to preview your music habits before the official Wrapped is released.
+**spotify-wrapped-up-estimate** is an Angular application designed to give you a sneak peek of what your Spotify Wrapped might look like at the end of 2024. The app retrieves your top tracks and artists of the last year using Spotify's Web API, then infers your top genre and estimates your total minutes listened. It presents these insights in a format similar to Spotify's 2023 Wrapped, allowing you to preview your music habits before the official Wrapped Up is released.
 
 # Built With
 
