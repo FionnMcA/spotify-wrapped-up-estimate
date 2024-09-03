@@ -1,0 +1,6 @@
+export const environment = {
+  production: false,
+  SPOTIFY_CLIENT_ID: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  SPOTIFY_CLIENT_SECRET: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  REDIRECT_URI: 'http://localhost:4200/callback'
+};

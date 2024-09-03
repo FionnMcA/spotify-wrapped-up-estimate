@@ -1,0 +1,85 @@
+<body>
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="!loading">
+    <div class="card-container">
+      <div class="full-card" [ngStyle]="{'background-image': 'url(/' + selectedColor + '.JPEG)'}">
+        <div class="container">
+          <div class="img-box">
+            <img
+              class="image-cover"
+              [src]="topArtistImg"
+              alt="Top Artist Image"
+            />
+          </div>
+          <table>
+            <tr class="title">
+              <td>Top Artists</td>
+              <td>Top Songs</td>
+            </tr>
+            <tr>
+              <td class="top-artists-and-tracks">
+                <ul>
+                  @for(artist of topArtists(); track artist.id) {
+                    <li>{{$index + 1}} {{ artist.name | ellipsis:12 }}</li>
+                  }
+                </ul>
+              </td>
+              <td class="top-artists-and-tracks">
+                <ul>
+                  @for(track of topTracks(); track track.id) {
+                    <li>{{$index + 1}} {{ track.name | ellipsis:14 }}</li>
+                  }
+                </ul>
+              </td>
+            </tr>
+            <tr class="additional-space">
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="title">
+              <td>Minutes Listened</td>
+              <td>Top Genre</td>
+            </tr>
+            <tr class="minutes-and-genre">
+              <td>{{ minutesListened() | number }}</td>
+              <td>{{ topGenre() | capitalizeFirst | ellipsis:16 }}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+     <div class="button-container">
+        <button 
+            [ngClass]="{'selected': selectedColor === 'blue'}"
+            (click)="changeBackgroundColor('blue')">Blue</button>
+        <button 
+            [ngClass]="{'selected': selectedColor === 'green'}"
+            (click)="changeBackgroundColor('green')">Green</button>
+        <button 
+            [ngClass]="{'selected': selectedColor === 'orange'}"
+            (click)="changeBackgroundColor('orange')">Orange</button>
+        <button 
+            [ngClass]="{'selected': selectedColor === 'red'}"
+            (click)="changeBackgroundColor('red')">Red</button>
+        </div>
+    </div>
+  </div>
+</body>
+
+<style>
+.button-container button {
+  cursor: pointer;
+  border: none;
+  background-color: #f0f0f0;
+}
+
+.button-container button:hover {
+  background-color: #d0d0d0;
+}
+
+.button-container button.selected {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+</style>
